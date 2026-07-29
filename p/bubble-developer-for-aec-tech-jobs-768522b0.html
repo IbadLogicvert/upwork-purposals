@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — Bubble developer for AEC Tech Jobs</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.6em 0; padding:18px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:inline-block; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>Bubble developer for AEC Tech Jobs</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>You need a Canvas-savvy Bubble dev to own AEC Tech Jobs.</p>
+<h2>My proposed approach</h2>
+<ul><li>Audit the Canvas structure first</li><li>Build the employer dashboard and job posting flow</li><li>Wire Stripe billing and SendGrid emails</li></ul>
+<h2>What you will get</h2>
+<ul><li>A working dashboard and payments</li></ul>
+<h2>Timeline</h2>
+<p>About 2-3 weeks.</p>
+
+    <section class="diagram">
+      <pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryBorderColor':'#14a800','lineColor':'#39c421'}}}%%
+graph TD
+A[Audit Canvas]--&gt;B[Employer Dashboard]
+B--&gt;C[Stripe + SendGrid]
+C--&gt;D[Launch]</pre>
+    </section>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/nx/proposals/job/~123/apply/" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+</body>
+</html>
