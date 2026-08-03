@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — Bubble Developer for Workflow App</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.4em 0 1.8em; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:block; }
+  .diagram svg { width:100%; max-width:600px; height:auto; margin:0 auto; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>Bubble Developer for Workflow App</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>You've fully specced a workflow app for Western USI - around 800 installation sites, daily Excel work orders, team allocation, and completion photos going to Cloudflare - and need someone to turn the SRS and wireframes into a polished Bubble build. I recently built a field-service app in Bubble where installers got assigned jobs, followed GPS links to each location, and uploaded completion photos that fired automatic notifications - close to exactly this.</p>
+<p>I'm a senior full-stack developer who turns ideas into production-ready web apps across React, Next.js, Node, and Rails, and I spin up fast MVPs in Bubble.io and Xano when speed matters.</p>
+<h2>My proposed approach</h2>
+<div class="diagram"><pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryTextColor':'#0c2f00','primaryBorderColor':'#14a800','lineColor':'#39c421','secondaryColor':'#f2f7ff','tertiaryColor':'#f7f7f7','fontFamily':'Inter, Helvetica, Arial, sans-serif','fontSize':'15px'},'flowchart':{'curve':'basis','htmlLabels':true},'sequence':{'mirrorActors':false}}}%%
+graph TD
+    A[Excel Work Orders] --&gt; B[Bubble Database]
+    B --&gt; C[Team Allocation]
+    C --&gt; D[Installer Mobile App]
+    D --&gt; E[Photos to Cloudflare]
+    E --&gt; F[Automatic Completion Email]</pre></div>
+<p>Data model first. I'll turn your SRS into clean Bubble types - Sites, Equipment, Work Orders, Teams, Jobs, Photos - so the 800 locations and daily orders relate correctly before screens go in.</p>
+<p>Excel import. A one-click importer where office staff upload the daily spreadsheet, preview rows, and commit - updating sites and work orders in minutes.</p>
+<p>Cloudflare photos. I'll wire Bubble's API Connector to Cloudflare so reference and completion photos live in your bucket, with Bubble holding the records and image links.</p>
+<p>Installer app. Mobile-first per your wireframes - assigned jobs, generated equipment list, tap-to-open GPS navigation, and on-completion photo capture that fires the automatic email.</p>
+<p>Admin interface. Team allocation and work-order oversight for office staff, matching your UX.</p>
+<h2>What you'll get</h2>
+<p>The full app built to your SRS and wireframes, with the Excel import, Cloudflare pipeline, GPS links, and completion emails working. I'll share a staging link and weekly progress updates.</p>
+<h2>Timeline and pricing</h2>
+<p>Fixed price: $5,000, matching your budget. Estimated 6 to 7 weeks from handoff of your SRS and wireframes, in weekly milestones. I normally bill $30/hr, quoting fixed here since the spec is locked.</p>
+<h2>Examples of similar work</h2>
+<p>My portfolio and Bubble/field-service work:</p>
+<p><a href="https://findibad.com" target="_blank" rel="noopener">https://findibad.com</a></p>
+<p>Code:</p>
+<p><a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">https://github.com/IbadAhmad80</a></p>
+<p>Happy to send a short Loom walking through the closest job-management build.</p>
+<h2>A couple of questions</h2>
+<p>For the daily import, does each Excel row map to one job at one site, and do work orders change mid-day, or is it a single morning import?</p>
+<p>Are you on Cloudflare R2 or Images, and is the bucket set up, or should I configure it as part of the build?</p>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/freelancers/ibada8" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+</body>
+</html>
