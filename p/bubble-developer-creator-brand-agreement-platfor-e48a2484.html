@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — Bubble Developer — Creator/Brand Agreement Platform (Stripe Connect + DocuSign)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.4em 0 1.8em; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:block; }
+  .diagram svg { width:100%; max-width:600px; height:auto; margin:0 auto; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>Bubble Developer — Creator/Brand Agreement Platform (Stripe Connect + DocuSign)</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>Your v1 has to move a brand and a creator from signup through Stripe Connect KYC, a structured deal questionnaire, an auto-assembled solicitor agreement, e-signature, and held funds that release on confirmed delivery. I've built this shape in Bubble before - Stripe Connect onboarding, role-based auth, and conditional payouts - so the stack is familiar.</p>
+<p>I'm a senior full-stack developer who helps startups turn ideas into production-ready web apps, working day to day across React, Next.js, Node, and Rails. I also spin up fast MVPs and internal tools with low-code platforms like Bubble.io and Xano, so teams can move quickly without sacrificing solid engineering.</p>
+<p>Portfolio (live Bubble builds included):</p>
+<p><a href="https://findibad.com" target="_blank" rel="noopener">https://findibad.com</a></p>
+<p>GitHub:</p>
+<p><a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">https://github.com/IbadAhmad80</a></p>
+<h2>My proposed approach</h2>
+<div class="diagram"><pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryTextColor':'#0c2f00','primaryBorderColor':'#14a800','lineColor':'#39c421','secondaryColor':'#f2f7ff','tertiaryColor':'#f7f7f7','fontFamily':'Inter, Helvetica, Arial, sans-serif','fontSize':'15px'},'flowchart':{'curve':'basis','htmlLabels':true},'sequence':{'mirrorActors':false}}}%%
+graph TD
+  A[Signup and Roles] --&gt; B[Stripe Connect KYC]
+  B --&gt; C[Deal Questionnaire]
+  C --&gt; D[Clause Assembly Documint]
+  D --&gt; E[Signature DocuSign]
+  E --&gt; F[Held Funds Release]
+  F --&gt; G[Dashboards and Emails]</pre></div>
+<p>I'd build it in four layers. First, email/password accounts with brand and creator roles, progressive profiles that only ask for details when a step needs them, plus the ToS acceptance flow with a timestamped audit record. Second, Stripe Connect KYC onboarding for both parties. Third, the structured questionnaire feeding your solicitor's JSON clause library into Documint or DocSpring for document assembly, then DocuSign or HelloSign for signature. Fourth, Stripe Connect fund-holding with conditional release on confirmed delivery, dashboards for active and past deals, and automated emails at each step.</p>
+<h2>What you'll get</h2>
+<p>A working Bubble app covering every in-scope item, nothing out of scope, built under your accounts.</p>
+<h2>Your questions, answered</h2>
+<p>1. Fixed price: $6,000.</p>
+<p>2. Timeline: 6 weeks, inside your 4-8 week window.</p>
+<p>3. Portfolio: live Bubble URLs on the link above, plus a Loom walking through the Stripe Connect and auth build. I built these personally and will build yours.</p>
+<p>4. Ownership: your Bubble app, code, Stripe, DocuSign and all assets are yours from day one.</p>
+<p>5. Milestones: (1) accounts, roles, profiles, ToS audit, KYC; (2) questionnaire and clause-library assembly; (3) signature and fund release; (4) dashboards, emails and QA.</p>
+<p>6. This brand-creator symbiosis is exactly the kind of build I enjoy.</p>
+<h2>A couple of questions</h2>
+<p>Does the JSON clause library use conditional clauses that switch on questionnaire answers, or a flat set in order?</p>
+<p>For conditional release, who confirms delivery - brand approval only, or creator-marks-delivered then brand-approves - and do you want a dispute or timeout path in v1?</p>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/freelancers/ibada8" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+</body>
+</html>
