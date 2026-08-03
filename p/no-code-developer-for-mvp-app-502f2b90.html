@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — No-Code Developer for MVP App</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.4em 0 1.8em; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:block; }
+  .diagram svg { width:100%; max-width:600px; height:auto; margin:0 auto; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>No-Code Developer for MVP App</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>You want a TaskRabbit-style on-demand services marketplace shipped as an MVP on iOS and Android, and the real challenge is not the screens - it is the two-sided flow where clients post tasks, taskers get matched, and payment moves safely between them. I have built two-sided marketplace apps with exactly that loop: role-based onboarding, booking, in-app chat, and Stripe payouts.</p>
+<p>I'm a senior full-stack developer who helps startups turn ideas into production-ready apps, working day to day across React, Next.js, Node, and Rails. I also spin up fast MVPs with low-code platforms like Bubble.io, FlutterFlow, and Xano, so teams move quickly without sacrificing solid engineering.</p>
+<p>Portfolio: <a href="https://findibad.com" target="_blank" rel="noopener">https://findibad.com</a></p>
+<p>GitHub: <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">https://github.com/IbadAhmad80</a></p>
+<h2>My Proposed Approach</h2>
+<div class="diagram"><pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryTextColor':'#0c2f00','primaryBorderColor':'#14a800','lineColor':'#39c421','secondaryColor':'#f2f7ff','tertiaryColor':'#f7f7f7','fontFamily':'Inter, Helvetica, Arial, sans-serif','fontSize':'15px'},'flowchart':{'curve':'basis','htmlLabels':true},'sequence':{'mirrorActors':false}}}%%
+graph TD
+    A[Client posts task] --&gt; B[Match with tasker]
+    B --&gt; C[In app chat]
+    C --&gt; D[Stripe payment hold]
+    D --&gt; E[Job completed]
+    E --&gt; F[Payout and review]</pre></div>
+<p>For real iOS and Android builds I would lead with FlutterFlow over Bubble, since it compiles to native apps you can push to the App Store and Play Store. Steps:</p>
+<p>1. Model the data - clients, taskers, task categories, bookings, reviews - in Firebase or Supabase.</p>
+<p>2. Build role-based signup and onboarding so clients and taskers get separate flows.</p>
+<p>3. Task posting, browsing by category, and the match and accept booking loop.</p>
+<p>4. In-app chat plus push notifications for new tasks and messages.</p>
+<p>5. Stripe Connect for payments with a hold-and-release on job completion.</p>
+<p>6. Ratings and reviews, then build and submit to TestFlight and Play Console.</p>
+<h2>What You'll Get</h2>
+<p>Two published apps for iOS and Android, a working client and tasker experience, live payments, and a clean Firebase backend your team can extend.</p>
+<h2>Timeline</h2>
+<p>4 to 5 weeks for the core MVP above. At my $30/hr rate the $2,000 fixed budget covers a focused v1 - I will scope features to fit it and flag anything that pushes past.</p>
+<h2>A Couple of Questions</h2>
+<p>1. Do you already have designs, or should the build include UI design for the core screens?</p>
+<p>2. Do taskers set their own rates and get paid out, or does the platform set pricing and take a cut? That changes the whole payment and payout setup.</p>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/freelancers/ibada8" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+</body>
+</html>
