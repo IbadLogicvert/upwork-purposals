@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — Full-Stack Developer — Yacht Brokerage Deal Management Platform (Supabase + React + PDF Generation)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.4em 0 1.8em; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:block; }
+  .diagram svg { width:100%; max-width:600px; height:auto; margin:0 auto; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>Full-Stack Developer — Yacht Brokerage Deal Management Platform (Supabase + React + PDF Generation)</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>You've done the heavy thinking - Supabase schema, live RLS broker isolation, the prototype, and field maps for all 9 closing docs - and now you need it wired into a production app your 20 brokers across 3 offices can close deals in. That connect-the-dots work is exactly what I do: Supabase apps with auth, RLS, storage, and PDF generation wired end to end.</p>
+<p>I'm a senior full-stack developer who helps startups turn ideas into production-ready web apps, working day to day across React, Next.js, Node, and Rails. I also spin up fast MVPs and internal tools with low-code platforms like Bubble.io and Xano, so teams can move quickly without sacrificing solid engineering.</p>
+<p>Portfolio:</p>
+<p><a href="https://findibad.com" target="_blank" rel="noopener">https://findibad.com</a></p>
+<p>GitHub:</p>
+<p><a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">https://github.com/IbadAhmad80</a></p>
+<h2>My proposed approach</h2>
+<div class="diagram"><pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryTextColor':'#0c2f00','primaryBorderColor':'#14a800','lineColor':'#39c421','secondaryColor':'#f2f7ff','tertiaryColor':'#f7f7f7','fontFamily':'Inter, Helvetica, Arial, sans-serif','fontSize':'15px'},'flowchart':{'curve':'basis','htmlLabels':true},'sequence':{'mirrorActors':false}}}%%
+graph TD
+  A[Prototype to Next.js] --&gt; B[Wire Supabase Auth Data]
+  B --&gt; C[Deploy to Vercel]
+  C --&gt; D[PDF Merge Engine]
+  D --&gt; E[Dropbox Sign Esign]
+  E --&gt; F[Signed PDF to Storage]</pre></div>
+<p>Phase 2 first - port the prototype to Next.js + TypeScript + Tailwind, wire the Supabase JS client for auth and session, and connect the deal forms, document library, pricing waterfall, and checklist to your 13 tables so RLS keeps each broker isolated. Wire the admin panel to Supabase Auth for invite/edit/deactivate, then deploy to Vercel on your domain.</p>
+<p>Phase 3 - the PDF engine. Your field maps make this fast: pdf-lib fills the AcroForm fields for the YBAA PSA (all 68) and Acceptance of Vessel; ReportLab handles coordinate overlay for the 5 flat PDFs (CG-1340, MD DNR B-240, Warranty of Title, Loan Payoff, POAs), saved to the deal-docs bucket.</p>
+<p>Phase 4 - Dropbox Sign: send from the deal document view, webhook to flip document status, signed PDF back to Supabase.</p>
+<p>Phase 5 - mobile responsive, per-deal activity log, Resend notifications on signed and stage change, custom SMTP for invites.</p>
+<h2>What you'll get</h2>
+<p>A production-ready platform on your domain replacing YachtCloser - every form saving to Supabase, all 9 documents generating and e-signing cleanly.</p>
+<h2>Timeline</h2>
+<p>Roughly 5-7 weeks, delivered phase by phase so you can test each. My rate is $30/hr, inside your band.</p>
+<h2>A couple of questions</h2>
+<p>1. Supabase Edge Functions run Deno, so ReportLab (Python) can't run there. Do you want the whole PDF pipeline in one Render.com Python worker, or AcroForm fills in an Edge Function and overlays in Python?</p>
+<p>2. For Dropbox Sign, do the 9 docs go out as one combined packet per deal or individually, and who signs which - seller, buyer, broker? That shapes the webhook status mapping.</p>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/freelancers/ibada8" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+</body>
+</html>
