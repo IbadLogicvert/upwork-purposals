@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — Experienced Bubble.io Developer Needed to Build a SaaS Platform</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.4em 0 1.8em; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:block; }
+  .diagram svg { width:100%; max-width:600px; height:auto; margin:0 auto; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>Experienced Bubble.io Developer Needed to Build a SaaS Platform</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>You need an MVP where every agent gets a digital office with a personal dashboard and an auto-generated professional website on a subdomain of your main domain, all behind role-based permissions. I've built multi-tenant Bubble apps exactly like this - role-gated dashboards, auto-generated profile sites, and social integrations - and shipped them to production.</p>
+<p>I'm a senior full-stack developer who helps startups turn ideas into production-ready web apps, working day to day across React, Next.js, Node, and Rails. I also spin up fast MVPs and internal tools with low-code platforms like Bubble.io and Xano, so teams can move quickly without sacrificing solid engineering.</p>
+<p>Portfolio: <a href="https://findibad.com" target="_blank" rel="noopener">https://findibad.com</a></p>
+<p>GitHub: <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">https://github.com/IbadAhmad80</a></p>
+<h2>My Proposed Approach</h2>
+<div class="diagram"><pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryTextColor':'#0c2f00','primaryBorderColor':'#14a800','lineColor':'#39c421','secondaryColor':'#f2f7ff','tertiaryColor':'#f7f7f7','fontFamily':'Inter, Helvetica, Arial, sans-serif','fontSize':'15px'},'flowchart':{'curve':'basis','htmlLabels':true},'sequence':{'mirrorActors':false}}}%%
+graph TD
+  A[Data Model and Roles] --&gt; B[Auth and Permissions]
+  B --&gt; C[Agent Office Dashboard]
+  C --&gt; D[Subdomain Profile Site]
+  B --&gt; E[Onboarding and Supervision]
+  E --&gt; F[Social and Content]
+  F --&gt; G[Admin Dashboard]</pre></div>
+<p>1. Data model first - a scalable schema for User, Agent Office, Specialization, and Content, with privacy rules enforcing agent vs admin access.</p>
+<p>2. Auth and roles - registration, login, and role-based permissions wired into privacy rules so agents only touch their own office.</p>
+<p>3. Agent office and auto-generated site - a dashboard per agent plus a public profile on their subdomain. True agent.yourdomain.com needs a Cloudflare Worker in front of Bubble; path-based is faster.</p>
+<p>4. Onboarding and supervision - guided onboarding, a specialization picker, and a supervision view for oversight.</p>
+<p>5. Social and content - connect accounts via Bubble's API Connector with OAuth, then content creation and management.</p>
+<p>6. Admin dashboard - manage users, content, and operations in one place.</p>
+<h2>What You'll Get</h2>
+<p>A responsive, production-ready MVP with registration, role-based dashboards, agent subdomains, onboarding, supervision, social integrations, and admin - built on clean, documented workflows I can extend in later phases.</p>
+<h2>Previous Projects, My Role, and Timeline</h2>
+<p>My Bubble builds are in my portfolio above, where I was sole developer owning the data model, workflows, and integrations. For this scope I estimate 6-8 weeks. On budget: my rate is $30/hr, and since yours is negotiable, I'd scope a tight phase 1 to fit and quote later phases as we lock features. Happy to send a short Loom of this build.</p>
+<h2>A Couple of Questions</h2>
+<p>1. Do you want true wildcard subdomains (agent.yourdomain.com), or is path-based (yourdomain.com/agent) fine? That changes the infrastructure.</p>
+<p>2. Which social platforms matter (Instagram, Facebook, LinkedIn, X), and should agents just connect and display, or post and schedule content?</p>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/freelancers/ibada8" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+</body>
+</html>
