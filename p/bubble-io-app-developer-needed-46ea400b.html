@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Proposal — Bubble.io App Developer Needed</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2314a800'/%3E%3C/svg%3E"/>
+<style>
+  :root { --brand:#14a800; --ink:#0f1a0c; --muted:#5b6b57; --line:#e6ece3; --bg:#f7faf6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#0f2e00,#166b00); color:#fff; padding:40px 0 34px; }
+  header .wrap { padding-bottom:0; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:.35em 0 .2em; }
+  .byline { opacity:.9; font-size:.95rem; }
+  main { margin-top:34px; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .5em; color:#123; border-left:3px solid var(--brand); padding-left:10px; }
+  p { margin:.6em 0; }
+  ul { margin:.4em 0 .8em; padding-left:1.2em; }
+  li { margin:.25em 0; }
+  a { color:var(--brand); }
+  .diagram { margin:1.4em 0 1.8em; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; text-align:center; overflow-x:auto; }
+  .diagram .mermaid { display:block; }
+  .diagram svg { width:100%; max-width:600px; height:auto; margin:0 auto; }
+  .cta { margin:2.4em 0 0; padding:22px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .btn { background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+    padding:11px 20px; border-radius:10px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Proposal · Ibad Ahmad</div>
+  <h1>Bubble.io App Developer Needed</h1>
+  <div class="byline">Prepared by Ibad Ahmad</div>
+</div></header>
+<div class="wrap"><main>
+<p>Hey.</p>
+<p>You need real native iOS and Android apps built in Bubble's native mobile editor - not web views on a phone - with in-app payments that actually reconcile and monitoring that catches breaks before users do. I've shipped Bubble apps wired through the API Connector, with payment webhooks reconciling refunds and out-of-order events across dev and live keys.</p>
+<p>I'm a senior full-stack developer who helps startups turn ideas into production-ready web apps, working day to day across React, Next.js, Node, and Rails. I also spin up fast MVPs and internal tools with low-code platforms like Bubble.io and Xano, so teams can move quickly without sacrificing solid engineering.</p>
+<p>Portfolio: <a href="https://findibad.com" target="_blank" rel="noopener">https://findibad.com</a></p>
+<p>GitHub: <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">https://github.com/IbadAhmad80</a></p>
+<h2>My Proposed Approach</h2>
+<div class="diagram"><pre class="mermaid">%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eaf7e6','primaryTextColor':'#0c2f00','primaryBorderColor':'#14a800','lineColor':'#39c421','secondaryColor':'#f2f7ff','tertiaryColor':'#f7f7f7','fontFamily':'Inter, Helvetica, Arial, sans-serif','fontSize':'15px'},'flowchart':{'curve':'basis','htmlLabels':true},'sequence':{'mirrorActors':false}}}%%
+graph TD
+  A[Mobile Data Model] --&gt; B[Native UI Shell]
+  B --&gt; C[API Connector Integrations]
+  C --&gt; D[In-App Payment Webhooks]
+  D --&gt; E[Real Device QA]
+  E --&gt; F[Store Submission]
+  F --&gt; G[Monitoring and Alerts]</pre></div>
+<ul><li>Model the shared data and privacy rules first, so web and mobile stay in sync and no rule leaks data.</li><li>Build the native shell - tab, stack, and modal navigation, safe areas, status bars - degraded for older low-end Android common in rural areas.</li><li>Wire native push, location, camera, and in-app purchases, plus the API Connector for REST and webhooks with OAuth, bearer tokens, refresh, and retry logic for flaky connectivity.</li><li>Reconcile payments in sandbox - partial captures, refunds, out-of-order webhooks - before a deliberate live cutover, then test on real devices, verify against store review rules, and alert on failed payments, broken webhooks, crashes, and Bubble workload.</li></ul>
+<h2>What You'll Get</h2>
+<p>Published, monitored iOS and Android apps, a documented test plan, and honest calls when Bubble is the wrong tool.</p>
+<h2>Timeline</h2>
+<p>A first build typically runs 4 to 6 weeks by integration count. My $30/hr sits above your posted band, but it covers reconciliation and monitoring that quietly break when skipped.</p>
+<h2>Certification And Portfolio</h2>
+<p>You want a recent certification and live walkthroughs. I'll be straight about where my certification stands on a first call rather than overselling here, and I'll send a short Loom through a real Bubble build.</p>
+<h2>A Couple Of Questions</h2>
+<p>1. For payments, is this native in-app purchases under Apple and Google billing, or Stripe for physical services? That shapes the reconciliation work.</p>
+<p>2. What's the oldest Android version you need to support for rural users? That sets how hard I can lean on the native editor.</p>
+<div class="cta">
+  <div><strong>Like this approach?</strong><br><span style="color:var(--muted)">Happy to jump on a quick call and get started.</span></div>
+  <a class="btn" href="https://www.upwork.com/freelancers/ibada8" target="_blank" rel="noopener">Message me on Upwork</a>
+</div>
+<footer>Ibad Ahmad · <a href="https://findibad.com" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/IbadAhmad80" target="_blank" rel="noopener">GitHub</a></footer>
+</main></div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    </script>
+</body>
+</html>
